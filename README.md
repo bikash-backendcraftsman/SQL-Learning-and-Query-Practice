@@ -26,6 +26,10 @@ This repository is my practice space for writing, running, and reviewing queries
 - [SQL Relational Operator](SQL%20Relational%20Operator) — comparison and other relational operators
 - [SQL Logical Operator](SQL%20Logical%20Operator) — `AND`, `OR`, `NOT` in the `WHERE` clause
 
+## Revision notes
+
+- [Oracle SQL – Operator Precedence](revision/Oracle-SQL-Operator-Precedence.md)
+
 ## How I practice
 
 1. Write a query that uses one operator.
