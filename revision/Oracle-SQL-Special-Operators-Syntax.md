@@ -1,5 +1,23 @@
 # Oracle SQL Special Operators – Syntax
 
+## Special operators
+
+These operators simplify conditions and help filter data based on particular requirements.
+
+| Operator | Purpose | Example |
+|----------|---------|---------|
+| `BETWEEN ... AND` | Checks a range (inclusive) | `SALARY BETWEEN 30000 AND 50000` |
+| `IN` | Matches values from a list | `DEPARTMENT IN ('IT','HR')` |
+| `NOT IN` | Excludes values from a list | `DEPARTMENT NOT IN ('IT','HR')` |
+| `LIKE` | Pattern matching | `ENAME LIKE 'A%'` |
+| `NOT LIKE` | Excludes a pattern | `ENAME NOT LIKE 'A%'` |
+| `IS NULL` | Checks NULL values | `COMM IS NULL` |
+| `IS NOT NULL` | Checks non-NULL values | `COMM IS NOT NULL` |
+| `EXISTS` | Checks whether a subquery returns rows | `EXISTS (SELECT 1...)` |
+| `NOT EXISTS` | Checks whether a subquery returns no rows | `NOT EXISTS (SELECT 1...)` |
+| `ANY` | Compares with at least one subquery value | `SALARY > ANY (...)` |
+| `ALL` | Compares with every subquery value | `SALARY > ALL (...)` |
+
 ## 1. BETWEEN / NOT BETWEEN
 
 Used to check whether a value falls within a specified range. Both boundaries are inclusive.
