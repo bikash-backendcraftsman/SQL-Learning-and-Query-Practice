@@ -93,6 +93,8 @@ FROM EMPLOYEE
 WHERE EMP_NAME LIKE 'A%';
 ```
 
+**Deep dive:** [Understanding `LIKE '%a'` and common patterns](Oracle-SQL-LIKE-Pattern-Matching.md)
+
 ---
 
 ## 4. IS NULL / IS NOT NULL
