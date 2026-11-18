@@ -30,6 +30,7 @@ This repository is my practice space for writing, running, and reviewing queries
 ## Revision notes
 
 - [Oracle SQL – Operator Precedence](revision/Oracle-SQL-Operator-Precedence.md)
+- [Oracle SQL Special Operators – Syntax](revision/Oracle-SQL-Special-Operators-Syntax.md)
 
 ## How I practice
 
