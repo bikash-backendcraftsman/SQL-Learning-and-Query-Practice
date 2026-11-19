@@ -19,3 +19,4 @@ See also: [Oracle SQL – Command categories](../revision/Oracle-SQL-Command-Cat
 - Question 4 — `MODIFY TICKET_PRICE NUMBER(12,2)`
 - Question 5 — `RENAME COLUMN PILOT_NAME TO CAPTAIN_NAME`
 - Question 6 — `DROP COLUMN SEAT_CAPACITY`
+- Question 7 — `RENAME` table `FLIGHT_MANAGEMENT` to `FLIGHT_DETAILS`
