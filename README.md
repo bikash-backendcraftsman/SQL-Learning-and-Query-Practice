@@ -32,6 +32,7 @@ This repository is my practice space for writing, running, and reviewing queries
 - [Oracle SQL – Operator Precedence](revision/Oracle-SQL-Operator-Precedence.md)
 - [Oracle SQL Special Operators – Syntax](revision/Oracle-SQL-Special-Operators-Syntax.md)
 - [Oracle SQL – LIKE pattern matching](revision/Oracle-SQL-LIKE-Pattern-Matching.md)
+- [Oracle SQL – Concatenation operators](revision/Oracle-SQL-Concatenation-Operators-Syntax.md)
 
 ## How I practice
 
