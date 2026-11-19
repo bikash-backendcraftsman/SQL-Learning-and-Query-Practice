@@ -26,6 +26,7 @@ This repository is my practice space for writing, running, and reviewing queries
 - [SQL Relational Operator](SQL%20Relational%20Operator) — comparison and other relational operators
 - [SQL Logical Operator](SQL%20Logical%20Operator) — `AND`, `OR`, `NOT` in the `WHERE` clause
 - [SQL Special Operator](SQL%20Special%20Operator) — `BETWEEN`, `IN`, `LIKE`, `IS NULL`, and related conditions
+- [SQL Concatenation Operator](SQL%20Concatenation%20Operator) — combine columns and literals with `||`
 
 ## Revision notes
 
