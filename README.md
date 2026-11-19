@@ -34,6 +34,7 @@ This repository is my practice space for writing, running, and reviewing queries
 - [Oracle SQL Special Operators – Syntax](revision/Oracle-SQL-Special-Operators-Syntax.md)
 - [Oracle SQL – LIKE pattern matching](revision/Oracle-SQL-LIKE-Pattern-Matching.md)
 - [Oracle SQL – Concatenation operators](revision/Oracle-SQL-Concatenation-Operators-Syntax.md)
+- [Oracle SQL – Command categories (DDL, DML, DRL, TCL, DCL)](revision/Oracle-SQL-Command-Categories.md)
 
 ## How I practice
 
