@@ -121,6 +121,147 @@ Remember: `= NULL` and `<> NULL` are incorrect ways to check NULL.
 
 ---
 
+## Understanding and Using NULL in SQL
+
+In Oracle SQL, understanding when to insert NULL and when to avoid NULL is important for database design, data quality, and SQL interviews.
+
+Let's understand it with your **EMPLOYEE** table.
+
+### 1. What is NULL?
+
+NULL means a value is **missing**, **unknown**, or **not applicable**.
+
+It is not the same as:
+
+| Value | Meaning |
+|-------|---------|
+| `NULL` | Unknown or missing |
+| `0` | Actual numeric zero |
+| `''` | Empty string (Oracle treats zero-length character strings as NULL) |
+| `' '` | A space character |
+| `'N/A'` | Actual text value |
+
+**Example:**
+
+| EMP_ID | EMP_NAME | SALARY | BONUS |
+|--------|----------|--------|-------|
+| 101 | Amit | 50000 | 5000 |
+| 102 | Priya | 60000 | NULL |
+| 103 | Rahul | 0 | 0 |
+| 104 | Neha | 55000 | NULL |
+
+Priya's bonus is unknown or not recorded. Rahul's bonus is explicitly **zero**.
+
+### 2. When should we insert NULL?
+
+| Scenario | Example | Should NULL be allowed? |
+|----------|---------|-------------------------|
+| Optional information | Employee middle name | Yes |
+| Not yet available | DOB awaiting verification | Yes |
+| Not applicable | Bonus for ineligible employee | Possibly |
+| Future information | Resignation date for active employee | Yes |
+| Optional contact | Alternate phone number | Yes |
+| Unknown information | Previous company | Yes |
+
+**Example:**
+
+```sql
+INSERT INTO EMPLOYEE (EMP_ID, EMP_NAME, DEPARTMENT, SALARY, DOB)
+VALUES (101, 'Amit', 'IT', 50000, NULL);
+```
+
+DOB is not available yet; NULL is reasonable if business rules permit it.
+
+### 3. When should we avoid NULL?
+
+| Column | Why avoid NULL? |
+|--------|-----------------|
+| `EMP_ID` | Every employee needs identification |
+| `EMP_NAME` | Employee identity is essential |
+| `DEPARTMENT` | Required if organizational assignment is mandatory |
+| `SALARY` | Required for payroll when salary is established |
+| `HIREDATE` | Required for employment records |
+
+Enforce mandatory columns with **NOT NULL**:
+
+```sql
+CREATE TABLE EMPLOYEE_DETAILS (
+    EMP_ID   NUMBER NOT NULL,
+    EMP_NAME VARCHAR2(100) NOT NULL,
+    DEPARTMENT VARCHAR2(50),
+    SALARY   NUMBER(10,2)
+);
+```
+
+Oracle rejects `INSERT` without values for `EMP_ID` or `EMP_NAME`.
+
+### 4. How to insert NULL in Oracle SQL?
+
+**Method 1 — Explicit NULL**
+
+```sql
+INSERT INTO EMPLOYEE (EMP_ID, EMP_NAME, DEPARTMENT, SALARY, DOB)
+VALUES (105, 'Rahul', 'IT', 60000, NULL);
+```
+
+**Method 2 — Omit optional column**
+
+```sql
+INSERT INTO EMPLOYEE (EMP_ID, EMP_NAME, DEPARTMENT, SALARY)
+VALUES (106, 'Neha', 'Finance', 55000);
+```
+
+If `DOB` has no default and allows NULL, Oracle stores NULL in `DOB`.
+
+**Method 3 — UPDATE to NULL**
+
+```sql
+UPDATE EMPLOYEE
+SET DOB = NULL
+WHERE EMP_ID = 105;
+```
+
+### 5. How to prevent NULL insertion?
+
+```sql
+ALTER TABLE EMPLOYEE
+MODIFY EMP_NAME NOT NULL;
+```
+
+**DEFAULT + NOT NULL:**
+
+```sql
+ALTER TABLE EMPLOYEE
+ADD STATUS VARCHAR2(20) DEFAULT 'ACTIVE' NOT NULL;
+```
+
+- **DEFAULT** — value when the column is omitted.
+- **NOT NULL** — column cannot store NULL.
+
+An explicit `NULL` in `INSERT` can override `DEFAULT` unless **NOT NULL** blocks it.
+
+### 6. Important interview points
+
+1. NULL = missing, unknown, or inapplicable — not zero.
+2. NULL ≠ empty string; Oracle treats `''` as NULL for character types.
+3. Use `IS NULL` / `IS NOT NULL` (not `= NULL`).
+4. Arithmetic with NULL generally yields NULL.
+5. **NVL()** — replace NULL with another value.
+6. **COALESCE()** — first non-NULL expression.
+7. **NOT NULL** constraint for mandatory columns.
+8. Avoid fake placeholders (`0`, `'N/A'`, `'UNKNOWN'`) just to avoid NULL.
+
+**Example:**
+
+```sql
+SELECT EMP_NAME,
+       SALARY,
+       NVL(SALARY, 0) AS DISPLAY_SALARY
+FROM EMPLOYEE;
+```
+
+---
+
 ## 5. EXISTS / NOT EXISTS
 
 Used to check whether a subquery returns at least one row.
