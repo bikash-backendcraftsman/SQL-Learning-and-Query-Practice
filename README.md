@@ -27,6 +27,7 @@ This repository is my practice space for writing, running, and reviewing queries
 - [SQL Logical Operator](SQL%20Logical%20Operator) — `AND`, `OR`, `NOT` in the `WHERE` clause
 - [SQL Special Operator](SQL%20Special%20Operator) — `BETWEEN`, `IN`, `LIKE`, `IS NULL`, and related conditions
 - [SQL Concatenation Operator](SQL%20Concatenation%20Operator) — combine columns and literals with `||`
+- [SQL ALTER and UPDATE Commands](SQL%20ALTER%20and%20UPDATE%20Commands) — `ALTER TABLE` and `UPDATE` on `FLIGHT_MANAGEMENT`
 
 ## Revision notes
 
