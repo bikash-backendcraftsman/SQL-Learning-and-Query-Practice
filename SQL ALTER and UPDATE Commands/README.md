@@ -16,3 +16,4 @@ See also: [Oracle SQL – Command categories](../revision/Oracle-SQL-Command-Cat
 - Question 1 — `ADD PILOT_NAME`
 - Question 2 — `ADD SEAT_CAPACITY`
 - Question 3 — `MODIFY AIRLINE_NAME`
+- Question 4 — `MODIFY TICKET_PRICE NUMBER(12,2)`
