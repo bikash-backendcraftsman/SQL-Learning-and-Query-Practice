@@ -240,12 +240,51 @@ ADD STATUS VARCHAR2(20) DEFAULT 'ACTIVE' NOT NULL;
 
 An explicit `NULL` in `INSERT` can override `DEFAULT` unless **NOT NULL** blocks it.
 
+### Arithmetic with NULL
+
+If any operand in an arithmetic expression is **NULL**, Oracle evaluates the whole result as **NULL** (unknown).
+
+**Example 1 — Addition**
+
+```sql
+SELECT EMP_NAME,
+       SALARY,
+       BONUS,
+       SALARY + BONUS AS TOTAL_PAY
+FROM EMPLOYEE
+WHERE EMP_ID = 102;
+-- If BONUS is NULL, SALARY + BONUS is NULL (not SALARY alone).
+```
+
+**Example 2 — Multiplication in an expression**
+
+```sql
+SELECT EMP_NAME,
+       SALARY,
+       (12 * SALARY) + COMMISSION AS ANNUAL_WITH_COMMISSION
+FROM EMPLOYEE
+WHERE COMMISSION IS NULL;
+-- (12 * SALARY) is a number, but adding NULL makes the entire result NULL.
+```
+
+**Example 3 — Subtraction**
+
+```sql
+SELECT EMP_NAME,
+       SALARY,
+       SALARY - NULL AS ADJUSTED_SALARY
+FROM EMPLOYEE;
+-- Every row returns NULL for ADJUSTED_SALARY, because NULL was used in the calculation.
+```
+
+Use **NVL()** or **COALESCE()** when you need a numeric fallback instead of NULL.
+
 ### 6. Important interview points
 
 1. NULL = missing, unknown, or inapplicable — not zero.
 2. NULL ≠ empty string; Oracle treats `''` as NULL for character types.
 3. Use `IS NULL` / `IS NOT NULL` (not `= NULL`).
-4. Arithmetic with NULL generally yields NULL.
+4. Arithmetic with NULL generally yields NULL (see examples above).
 5. **NVL()** — replace NULL with another value.
 6. **COALESCE()** — first non-NULL expression.
 7. **NOT NULL** constraint for mandatory columns.
