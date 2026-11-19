@@ -1,0 +1,5 @@
+-- Question 3
+-- Change AIRLINE_NAME size (e.g. from 50 to a larger VARCHAR2 length).
+
+ALTER TABLE FLIGHT_MANAGEMENT
+MODIFY AIRLINE_NAME VARCHAR2(100);
