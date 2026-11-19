@@ -18,3 +18,4 @@ See also: [Oracle SQL – Command categories](../revision/Oracle-SQL-Command-Cat
 - Question 3 — `MODIFY AIRLINE_NAME`
 - Question 4 — `MODIFY TICKET_PRICE NUMBER(12,2)`
 - Question 5 — `RENAME COLUMN PILOT_NAME TO CAPTAIN_NAME`
+- Question 6 — `DROP COLUMN SEAT_CAPACITY`
