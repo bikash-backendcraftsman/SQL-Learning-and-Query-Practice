@@ -44,3 +44,7 @@ This repository is my practice space for writing, running, and reviewing queries
 3. Note what the operator includes and excludes.
 4. Combine operators and practice again.
 
+## Study log
+
+- **2026-11-20** — Continued Oracle DDL on `FLIGHT_MANAGEMENT` / `FLIGHT_DETAILS`: `ALTER` (ADD, MODIFY, DROP, RENAME COLUMN) and table `RENAME`.
+
