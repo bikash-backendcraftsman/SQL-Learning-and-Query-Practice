@@ -12,6 +12,7 @@ This repository is my practice space for writing, running, and reviewing queries
 - Null checks (`IS NULL`, `IS NOT NULL`)
 - Arithmetic operators in `SELECT` and `WHERE`
 - Set operators (`UNION`, `UNION ALL`, `INTERSECT`, `EXCEPT`)
+- **TCL** — `COMMIT`, `ROLLBACK`, `SAVEPOINT`, transaction control (current focus)
 
 ## Relational operators — important concepts to remember
 
@@ -28,6 +29,7 @@ This repository is my practice space for writing, running, and reviewing queries
 - [SQL Special Operator](SQL%20Special%20Operator) — `BETWEEN`, `IN`, `LIKE`, `IS NULL`, and related conditions
 - [SQL Concatenation Operator](SQL%20Concatenation%20Operator) — combine columns and literals with `||`
 - [SQL ALTER and UPDATE Commands](SQL%20ALTER%20and%20UPDATE%20Commands) — `ALTER TABLE` and `UPDATE` on `FLIGHT_MANAGEMENT`
+- [SQL TCL Commands](SQL%20TCL%20Commands) — transaction control with `COMMIT`, `ROLLBACK`, `SAVEPOINT`
 
 ## Revision notes
 
@@ -36,6 +38,7 @@ This repository is my practice space for writing, running, and reviewing queries
 - [Oracle SQL – LIKE pattern matching](revision/Oracle-SQL-LIKE-Pattern-Matching.md)
 - [Oracle SQL – Concatenation operators](revision/Oracle-SQL-Concatenation-Operators-Syntax.md)
 - [Oracle SQL – Command categories (DDL, DML, DRL, TCL, DCL)](revision/Oracle-SQL-Command-Categories.md)
+- [Oracle SQL – TCL (Transaction Control)](revision/Oracle-SQL-TCL-Transaction-Control.md)
 
 ## How I practice
 
@@ -47,4 +50,5 @@ This repository is my practice space for writing, running, and reviewing queries
 ## Study log
 
 - **2026-11-20** — Continued Oracle DDL on `FLIGHT_MANAGEMENT` / `FLIGHT_DETAILS`: `ALTER` (ADD, MODIFY, DROP, RENAME COLUMN) and table `RENAME`.
+- **2026-11-22** — **TCL**: `COMMIT`, `ROLLBACK`, `SAVEPOINT`, and `ROLLBACK TO SAVEPOINT` on `EMPLOYEE`.
 
