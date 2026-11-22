@@ -1,6 +1,6 @@
 -- Question 5
 -- Display employee names with each word capitalized using INITCAP().
--- Concept: Character function — INITCAP()
+-- Function concept used : INITCAP() : Capitalize the first letter of each word for title-case display.
 --
 -- What INITCAP() does
 -- • Uppercases the first character of each word in the string.

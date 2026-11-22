@@ -1,6 +1,6 @@
 -- Question 1
 -- Display all employee names in uppercase using UPPER().
--- Concept: Character function — UPPER() converts text to uppercase.
+-- Function concept used : UPPER() : Convert text to uppercase for display and formatting.
 
 SELECT EMP_NAME,
        UPPER(EMP_NAME)

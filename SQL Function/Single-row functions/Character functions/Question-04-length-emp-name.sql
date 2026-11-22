@@ -1,6 +1,6 @@
 -- Question 4
 -- Find the length of every employee name using LENGTH().
--- Concept: Character function — LENGTH() returns the number of characters in a string.
+-- Function concept used : LENGTH() : Count characters in each name for validation, filtering, and reporting.
 --
 -- Is this query correct?
 -- Yes. LENGTH(EMP_NAME) counts characters in each name; one result per row (single-row function).
