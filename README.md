@@ -12,7 +12,8 @@ This repository is my practice space for writing, running, and reviewing queries
 - Null checks (`IS NULL`, `IS NOT NULL`)
 - Arithmetic operators in `SELECT` and `WHERE`
 - Set operators (`UNION`, `UNION ALL`, `INTERSECT`, `EXCEPT`)
-- **TCL** — `COMMIT`, `ROLLBACK`, `SAVEPOINT`, transaction control (current focus)
+- **TCL** — `COMMIT`, `ROLLBACK`, `SAVEPOINT`, transaction control
+- **SQL functions** — single-row, aggregate, and conversion functions (current focus)
 
 ## Relational operators — important concepts to remember
 
@@ -30,6 +31,7 @@ This repository is my practice space for writing, running, and reviewing queries
 - [SQL Concatenation Operator](SQL%20Concatenation%20Operator) — combine columns and literals with `||`
 - [SQL ALTER and UPDATE Commands](SQL%20ALTER%20and%20UPDATE%20Commands) — `ALTER TABLE` and `UPDATE` on `FLIGHT_MANAGEMENT`
 - [SQL TCL Commands](SQL%20TCL%20Commands) — transaction control with `COMMIT`, `ROLLBACK`, `SAVEPOINT`
+- [SQL Function](SQL%20Function) — Oracle SQL functions in queries
 
 ## Revision notes
 
@@ -39,6 +41,7 @@ This repository is my practice space for writing, running, and reviewing queries
 - [Oracle SQL – Concatenation operators](revision/Oracle-SQL-Concatenation-Operators-Syntax.md)
 - [Oracle SQL – Command categories (DDL, DML, DRL, TCL, DCL)](revision/Oracle-SQL-Command-Categories.md)
 - [Oracle SQL – TCL (Transaction Control)](revision/Oracle-SQL-TCL-Transaction-Control.md)
+- [SQL Function Revision](revision/SQL%20Function%20Revision/README.md) — function-specific notes only
 
 ## How I practice
 
