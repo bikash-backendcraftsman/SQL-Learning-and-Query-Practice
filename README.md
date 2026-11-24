@@ -54,4 +54,5 @@ This repository is my practice space for writing, running, and reviewing queries
 
 - **2026-11-20** — Continued Oracle DDL on `FLIGHT_MANAGEMENT` / `FLIGHT_DETAILS`: `ALTER` (ADD, MODIFY, DROP, RENAME COLUMN) and table `RENAME`.
 - **2026-11-22** — **TCL**: `COMMIT`, `ROLLBACK`, `SAVEPOINT`, and `ROLLBACK TO SAVEPOINT` on `EMPLOYEE`.
+- **2026-11-24** — **INSTR()** character function practice on `EMPLOYEE` names.
 
